@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .icon-stackoverflow:before {
     content: "\eacf";
 }
+$break-small:600px;
 body {
     font-family: 'Prociono', serif;
     text-align: center;
@@ -60,7 +61,6 @@ body {
 }
 ul {
     list-style: none;
-    
     padding: 0;
 }
 li {
@@ -81,29 +81,36 @@ li {
         @include flex(1);
     }
 }
-
 #avatar {
     width: 100%;
-    height: 360px;
     .wrapper {
         margin: 0 auto;
         height: 360px;
         width: 360px;
+        @media screen and (max-width: $break-small) {
+            height: 240px;
+            width: 240px;
+        }
         @include background(url("/img/avatar.jpg"), center no-repeat orange);
         background-size: 100% 100%;
         border-radius: 50%;
         border: solid 2px #FFFFFF;
     }
-    
 }
 #brief {
     p {
         font-size: 2rem;
+        @media screen and (max-width: $break-small) {
+            font-size: 1.5rem;
+        }
     }
 }
 #links {
     i {
         font-size: 2rem;
+        @media screen and (max-width: $break-small) {
+            font-size: 1.5rem;
+        }
         &:hover {
             color: #FFFFFF;
         }
