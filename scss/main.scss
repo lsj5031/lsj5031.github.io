@@ -104,5 +104,8 @@ li {
 #links {
     i {
         font-size: 2rem;
+        &:hover {
+            color: #FFFFFF;
+        }
     }
 }
