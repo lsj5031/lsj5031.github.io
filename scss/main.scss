@@ -1,0 +1,108 @@
+@import "bourbon/bourbon";
+@import url(http://fonts.googleapis.com/css?family=Prociono);
+h1, h2, h3, h4, h5, h6, p, a {
+    color: #000000;
+}
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon.eot?-xufujb');
+    src: url('/fonts/icomoon.eot?#iefix-xufujb') format('embedded-opentype'), url('/fonts/icomoon.woff?-xufujb') format('woff'), url('/fonts/icomoon.ttf?-xufujb') format('truetype'), url('/fonts/icomoon.svg?-xufujb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-bitbucket:before {
+    content: "\f171";
+}
+.icon-weibo:before {
+    content: "\e600";
+}
+.icon-quill:before {
+    content: "\e907";
+}
+.icon-lab:before {
+    content: "\e9aa";
+}
+.icon-mail4:before {
+    content: "\ea86";
+}
+.icon-google-plus3:before {
+    content: "\ea8a";
+}
+.icon-facebook3:before {
+    content: "\ea8e";
+}
+.icon-twitter3:before {
+    content: "\ea93";
+}
+.icon-github:before {
+    content: "\eab1";
+}
+.icon-stackoverflow:before {
+    content: "\eacf";
+}
+body {
+    font-family: 'Prociono', serif;
+    text-align: center;
+    @include background(url("/img/congruent_pentagon.png"), linear-gradient(red, green), center no-repeat orange scroll);
+}
+ul {
+    list-style: none;
+    
+    padding: 0;
+}
+li {
+    display: inline;
+    a {
+        text-decoration: none;
+    }
+}
+#container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2rem;
+    @include display(flex);
+    @include align-items(center);
+    @include flex-direction(row);
+    @include justify-content(center);
+    &>section {
+        @include flex(1);
+    }
+}
+
+#avatar {
+    width: 100%;
+    height: 360px;
+    .wrapper {
+        margin: 0 auto;
+        height: 360px;
+        width: 360px;
+        @include background(url("/img/avatar.jpg"), center no-repeat orange);
+        background-size: 100% 100%;
+        border-radius: 50%;
+        border: solid 2px #FFFFFF;
+    }
+    
+}
+#brief {
+    p {
+        font-size: 2rem;
+    }
+}
+#links {
+    i {
+        font-size: 2rem;
+    }
+}
