@@ -70,9 +70,13 @@ li {
     }
 }
 #container {
-    width: 60%;
-    margin: 0 auto;
-    padding: 2rem;
+    width:100%;
+    @media screen and (min-width: $break-small) {
+        width: 60%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
     @include display(flex);
     @include align-items(center);
     @include flex-direction(row);
